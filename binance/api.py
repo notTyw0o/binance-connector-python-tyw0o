@@ -83,7 +83,7 @@ class API(object):
 
         if time_sync is None:
             time_sync = 0
-
+        print(time_sync)
         payload["timestamp"] = get_timestamp() + time_sync
         query_string = self._prepare_params(payload)
         payload["signature"] = self._get_sign(query_string)
